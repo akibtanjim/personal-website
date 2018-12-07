@@ -1,5 +1,8 @@
+body {
+  background: #f5f6fa !important;
+}
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -29,4 +32,77 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.app-sidebar .ui.thin.left.sidebar,
+.app-sidebar .ui.thin.right.sidebar {
+  width: auto !important;
+}
+.app-sidebar .bg-img {
+  background-image: linear-gradient(
+    to bottom right,
+    #002f4b,
+    #dc4225
+  ) !important;
+  background-size: cover !important;
+}
+.app-sidebar .ui.menu > .item:first-child {
+  margin-top: 100px;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+.ui.vertical.menu > .item:first-child:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0px !important;
+  background: rgba(34, 36, 38, 0.1);
+}
+.app-sidebar .second-menu-item {
+  margin-top: 100px;
+}
+.app-sidebar .user-name {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+/* .bg-img :before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right, #002f4b, #dc4225);
+  opacity: 0.6;
+} */
+.container {
+  padding: 20px;
+}
+.home-page-container {
+  margin-top: 1% !important;
+  margin-bottom: auto;
+}
+.home-page-container .ui.placeholder.segment {
+  background: #f5f6fa !important;
+}
+.home-page-container .ui.sub.header {
+  margin-top: 0px !important;
+  margin-bottom: 5px !important;
+  padding: 5px !important;
+}
+.home-page-container .ui .header::before {
+  height: 0px !important;
+}
+.home-page-container .ui.sub.header .email {
+  text-transform: none !important;
+  text-decoration: underline !important;
+}
+.timeline {
+  margin: 50px 32% !important;
+}
+.mb-10 {
+  margin-bottom: 10px !important;
 }
