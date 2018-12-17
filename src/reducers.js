@@ -1,7 +1,8 @@
-import { combineReducers } from "redux";
+import {combineReducers} from "redux";
 import defaultReducer from "./reducer";
+import infoReducer from "./containers/Home/reducer"
 
-const appReducer = combineReducers({ defaultReducer });
+const appReducer = combineReducers({defaultReducer, infoReducer});
 
 const rootReducer = (state, action) => {
   // if (action.type === "LOG_OUT") {     state = {};
