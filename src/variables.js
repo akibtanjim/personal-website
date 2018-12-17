@@ -1,2 +1,2 @@
-export const apiUrl = "http://localhost/akibtanjim/api/v1";
-export const imageUrl = "http://localhost/akibtanjim/public";
+export const apiUrl = "http://akibtanjim.com/admin/api/v1";
+export const imageUrl = "http://akibtanjim.com/admin/public";

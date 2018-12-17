@@ -1,11 +1,11 @@
-import { LOADING, LOADED, UPDATE_INFO } from "./action";
+import { LOADING, LOADED, UPDATE_PROJECT } from "./action";
 
 const initialState = {
   loading: false,
   loaded: false
 };
 
-function infoReducer(state = initialState, action) {
+function projectReducer(state = initialState, action) {
   switch (action.type) {
     case LOADING:
       return {
@@ -17,17 +17,17 @@ function infoReducer(state = initialState, action) {
         ...state,
         loaded: true
       };
-    case UPDATE_INFO:
+    case UPDATE_PROJECT:
       return {
         ...state,
         loading: false,
-        info: action.info
+        projects: action.project
       };
     default:
       return state;
   }
 }
 
-export const getGeneralInfo = state => state.infoReducer;
+export const getProjects = state => state.projectReducer;
 
-export default infoReducer;
+export default projectReducer;

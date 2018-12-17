@@ -1,11 +1,11 @@
-import { LOADING, LOADED, UPDATE_INFO } from "./action";
+import { LOADING, LOADED, UPDATE_PUBLICATION } from "./action";
 
 const initialState = {
   loading: false,
   loaded: false
 };
 
-function infoReducer(state = initialState, action) {
+function publicationReducer(state = initialState, action) {
   switch (action.type) {
     case LOADING:
       return {
@@ -17,17 +17,17 @@ function infoReducer(state = initialState, action) {
         ...state,
         loaded: true
       };
-    case UPDATE_INFO:
+    case UPDATE_PUBLICATION:
       return {
         ...state,
         loading: false,
-        info: action.info
+        publications: action.publication
       };
     default:
       return state;
   }
 }
 
-export const getGeneralInfo = state => state.infoReducer;
+export const getPublications = state => state.publicationReducer;
 
-export default infoReducer;
+export default publicationReducer;

@@ -2,12 +2,12 @@ import { apiUrl } from "./../../variables";
 import axios from "axios";
 export const LOADING = "LOADING";
 export const LOADED = "LOADED";
-export const UPDATE_INFO = "INFO";
+export const UPDATE_EXPERIENCE = "UPDATE_EXPERIENCE";
 
-export const getInfo = () => dispatch => {
+export const getExperiences = () => dispatch => {
   dispatch({ type: LOADING });
   axios
-    .get(apiUrl + "/info", {
+    .get(apiUrl + "/experiences", {
       headers: {
         "Access-Control-Allow-Origin": "*"
       }
@@ -22,6 +22,6 @@ export const getInfo = () => dispatch => {
     });
 };
 
-export const updateInfo = info => {
-  return { type: UPDATE_INFO, info };
+export const updateInfo = experience => {
+  return { type: UPDATE_EXPERIENCE, experience };
 };

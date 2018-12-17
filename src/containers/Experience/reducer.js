@@ -1,11 +1,11 @@
-import { LOADING, LOADED, UPDATE_INFO } from "./action";
+import { LOADING, LOADED, UPDATE_EXPERIENCE } from "./action";
 
 const initialState = {
   loading: false,
   loaded: false
 };
 
-function infoReducer(state = initialState, action) {
+function experienceReducer(state = initialState, action) {
   switch (action.type) {
     case LOADING:
       return {
@@ -17,17 +17,17 @@ function infoReducer(state = initialState, action) {
         ...state,
         loaded: true
       };
-    case UPDATE_INFO:
+    case UPDATE_EXPERIENCE:
       return {
         ...state,
         loading: false,
-        info: action.info
+        experiences: action.experience
       };
     default:
       return state;
   }
 }
 
-export const getGeneralInfo = state => state.infoReducer;
+export const getWorkExperiences = state => state.experienceReducer;
 
-export default infoReducer;
+export default experienceReducer;

@@ -5,6 +5,7 @@ import Experience from "./containers/Experience/Experience";
 import Project from "./containers/Project/Project";
 import Education from "./containers/Education/Education";
 import Skill from "./containers/Skill/Skill";
+import Publication from "./containers/Publication/Publication";
 import history from "./utils/history";
 
 export default (
@@ -15,6 +16,7 @@ export default (
         <Route path="/project" component={Project} />
         <Route path="/education" component={Education} />
         <Route path="/skill" component={Skill} />
+        <Route path="/publication" component={Publication} />
         <Route path="/home" component={Home} />
         <Route exact path="/" component={Home} />
       </div>

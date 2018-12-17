@@ -38,6 +38,10 @@ class VerticalSidebar extends Component {
         this.props.dispatch(changeActiveMenuItem("skill"));
         history.push("/skill");
         break;
+      case "publication":
+        this.props.dispatch(changeActiveMenuItem("publication"));
+        history.push("/publication");
+        break;
       default:
     }
   }
@@ -104,8 +108,8 @@ class VerticalSidebar extends Component {
         </Menu.Item>
         <Menu.Item
           as="a"
-          active={this.props.defaults.activeItem === "skill"}
-          onClick={() => this.handleMenuClick("skill")}
+          active={this.props.defaults.activeItem === "publication"}
+          onClick={() => this.handleMenuClick("publication")}
         >
           <Icon name="file alternate outline" />
           Publications
