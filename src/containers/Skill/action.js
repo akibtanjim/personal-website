@@ -1,4 +1,4 @@
-import { apiUrl } from "./../../variables";
+//import { apiUrl } from "./../../variables";
 import axios from "axios";
 export const LOADING = "LOADING";
 export const LOADED = "LOADED";
@@ -7,7 +7,7 @@ export const UPDATE_SKILL = "UPDATE_SKILL";
 export const getAllSkills = () => dispatch => {
   dispatch({ type: LOADING });
   axios
-    .get(apiUrl + "/skills", {
+    .get("http://akibtanjim.com/admin/api/v1/skills", {
       headers: {
         "Access-Control-Allow-Origin": "*"
       }

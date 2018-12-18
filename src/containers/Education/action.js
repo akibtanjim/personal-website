@@ -1,4 +1,4 @@
-import { apiUrl } from "./../../variables";
+//import { apiUrl } from "./../../variables";
 import axios from "axios";
 export const LOADING = "LOADING";
 export const LOADED = "LOADED";
@@ -7,7 +7,7 @@ export const UPDATE_EDUCATION = "UPDATE_EDUCATION";
 export const getAllEducations = () => dispatch => {
   dispatch({ type: LOADING });
   axios
-    .get(apiUrl + "/educations", {
+    .get("http://akibtanjim.com/admin/api/v1/educations", {
       headers: {
         "Access-Control-Allow-Origin": "*"
       }
