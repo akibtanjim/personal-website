@@ -49,7 +49,7 @@ class Home extends Component {
     }
   }
   componentDidMount() {
-    this.props.dispatch(getInfo());
+    Promise.all([this.props.dispatch(getInfo())]);
   }
   render() {
     const { open, closeOnEscape, closeOnDimmerClick } = this.state;
