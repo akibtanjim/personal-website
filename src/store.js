@@ -21,8 +21,6 @@ export default () => {
   const enhancers = [applyMiddleware(thunk)];
   enhancers.push(applyMiddleware(logger));
   let store = createStore(persistedReducer, undefined, compose(...enhancers));
-
   let persistor = persistStore(store);
-
   return { store, persistor };
 };
